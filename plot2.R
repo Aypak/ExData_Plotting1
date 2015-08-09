@@ -8,7 +8,7 @@ data<- household_power_consumption %>% mutate(Date=dmy(household_power_consumpti
 #Coercing the global active power from factor to numeric     
 data<- data %>% mutate(Global_active_power=as.numeric(levels(data$Global_active_power))[data$Global_active_power])
 
-#Create new column DateTime by combing date and time
+#Create new column DateTime by combining date and time
 data<- data %>% mutate(DateTime=paste(Date, Time, sep=" "))
 
 #Coerce DateTime into POSTIXlt
