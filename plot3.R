@@ -24,4 +24,4 @@ lines(Sub_metering_2~DateTime, data=data,type="l",col="red")
 lines(Sub_metering_3~DateTime, data=data,type="l",col="blue")
 
 #Add legend
-legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col = c("black","red","blue"), lty=c(1,1))
+legend("top", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), col = c("black","red","blue"), lty=1,bty='n', cex=.75))
