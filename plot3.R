@@ -16,7 +16,7 @@ data<- data %>% mutate(DateTime=ymd_hms(data$DateTime))
 
 #Coercing Sub_metering 1 and 2 from factor to numeric     
 data<- data %>% mutate(Sub_metering_1=as.numeric(levels(data$Sub_metering_1))[data$Sub_metering_1])
-data %>% mutate(Sub_metering_2=as.numeric(levels(data$Sub_metering_2))[data$Sub_metering_2])
+data<- data %>% mutate(Sub_metering_2=as.numeric(levels(data$Sub_metering_2))[data$Sub_metering_2])
 
 #Plot DateTime against Sub_metering_1 and add lines for Sub_metering_2 and 3
 plot(Sub_metering_1~DateTime, data=data,type="l",xlab="",ylab="Energy sub metering")
